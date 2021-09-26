@@ -1,117 +1,120 @@
+const { generate } = require("rxjs");
+
 const generateTitle = titleText => {
     // if (!titleText) {
     //     return '';
     // }
 
     return `
-    # Title ${titleText}
+    # How do i get this to show ---> ${titleText}
     `;
 }
 
-const generateTableOfContents = TableOfContentsText => {
-    if (!TableOfContentsText) {
-        return '';
-    }
+// const generateTableOfContents = tableOfContentsText => {
+//     // if (!TableOfContentsText) {
+//     //     return '';
+//     // }
 
-    return `
-    ## Table Of Contents
-    `
-}
+//     return `
+//     ## Table Of Contents ${tableOfContentsText}
+//     `
+// }
 
-const generateInstallation = InstallationText => {
-    if (!installationText) {
-        return '';
-    }
+// const generateInstallation = InstallationText => {
+//     if (!installationText) {
+//         return '';
+//     }
 
-    return `
-    ## Installation
-    `
-}
+//     return `
+//     ## Installation
+//     `
+// }
 
-const generateDescription = descriptionText => {
-    if (!descriptionText) {
-        return '';
-    }
+// const generateDescription = descriptionText => {
+//     if (!descriptionText) {
+//         return '';
+//     }
 
-    return `
-    ## Description
-    `
-}
+//     return `
+//     ## Description
+//     `
+// }
 
-const generateUsage = useageText => {
-    if (!useageText) {
-        return '';
-    }
+// const generateUsage = useageText => {
+//     if (!useageText) {
+//         return '';
+//     }
 
-    return `
-    ## Useage
-    `
-}
+//     return `
+//     ## Useage
+//     `
+// }
 
-const generateCredits = creditsText => {
-    if (!creditsText) {
-        return '';
-    }
+// const generateCredits = creditsText => {
+//     if (!creditsText) {
+//         return '';
+//     }
 
-    return `
-    ## Credits
-    `
-}
+//     return `
+//     ## Credits
+//     `
+// }
 
-const generateLicense = LicenseText => {
-    if (!LicenseText) {
-        return '';
-    }
+// const generateLicense = LicenseText => {
+//     if (!LicenseText) {
+//         return '';
+//     }
 
-    return `
-    ## License
-    `
-}
+//     return `
+//     ## License
+//     `
+// }
 
-const generateBadges = BadgesText => {
-    if (!BadgesText) {
-        return '';
-    }
+// const generateBadges = BadgesText => {
+//     if (!BadgesText) {
+//         return '';
+//     }
 
-    return `
-    ## Badges
-    `
-}
+//     return `
+//     ## Badges
+//     `
+// }
 
-const generateFeatures = featuresText => {
-    if (!featuresText) {
-        return '';
-    }
+// const generateFeatures = featuresText => {
+//     if (!featuresText) {
+//         return '';
+//     }
 
-    return `
-    ## Features
-    `
-}
+//     return `
+//     ## Features
+//     `
+// }
 
-const generateContributing = contributingText => {
-    if (!contributingText) {
-        return '';
-    }
+// const generateContributing = contributingText => {
+//     if (!contributingText) {
+//         return '';
+//     }
 
-    return `
-    ## Contributing
-    `
-}
+//     return `
+//     ## Contributing
+//     `
+// }
 
-const generateTests = testsText => {
-    if (!testsText) {
-        return '';
-    }
+// const generateTests = testsText => {
+//     if (!testsText) {
+//         return '';
+//     }
 
-    return `
-    ## Tests
-    `
-}
+//     return `
+//     ## Tests
+//     `
+// }
 
 module.exports = templateData => {
-    const {titleText} = templateData;
+    const { titleText } = templateData;
 
     return `
     ${generateTitle(titleText)}
+
     `
 }

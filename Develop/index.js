@@ -1,34 +1,27 @@
-// TODO: Include packages needed for this application
 const fs = require('fs')
 const inquirer = require('inquirer')
 
 const { writeFile } = require('./utils/generateMarkdown.js')
-const generatePage = require('./src/dist/page-template.js')
+const generatePage = require('./src/dist/page-template.js');
 
 // TODO: Create an array of questions for user input
-const promptUser = portfolioData => {
+const promptProject = portfolioData => {
         // If there's no 'projects' array property, create one
         if (!portfolioData) {
-            portfolioData = []
+            portfolioData= []
         }
+
         console.log(`
       =================
       Add a New Project
       =================
       `);
+      
     return inquirer.prompt([
             {
                 type: 'input',
                 name: 'title',
                 message: 'Please Provide The Title of your Project. (Required)',
-                validate: nameInput => {
-                    if (nameInput) {
-                        return true;
-                    } else {
-                        console.log('Please Provide The Title of your Project!');
-                        return false;
-                    }
-                }
             },
             {
                 type: 'input',
@@ -95,7 +88,7 @@ const promptUser = portfolioData => {
 // function init() { }
 
 // Function call to initialize app
-promptUser()
+promptProject()
     .then(portfolioData => {
         return generatePage(portfolioData);
     })
